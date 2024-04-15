@@ -14,9 +14,7 @@ def create_db():
 
     # Sample data
     sample_quotes = [
-        ("Be yourself; everyone else is already taken.", "Oscar Wilde"),
-        ("Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.", "Albert Einstein"),
-        ("So many books, so little time.", "Frank Zappa")
+        
     ]
 
     cursor.executemany('INSERT INTO quotes (text, author) VALUES (?, ?)', sample_quotes)

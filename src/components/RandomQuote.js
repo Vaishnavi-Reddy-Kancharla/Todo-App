@@ -7,21 +7,26 @@ function RandomQuote() {
     useEffect(() => {
         fetch('http://127.0.0.1:5000/api/quotes/random')
 
-            .then(response => response.json())
-            .then(data => {
-                if(data.text && data.author) {
-                    setQuote({ text: data.text, author: data.author });
-                } else {
-                    console.error('No quote found:', data);
-                }
-            })
-            .catch(error => console.error('Error fetching quote:', error));
-    }, []);
-
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data && data.text && data.author) {
+                setQuote({ text: data.text, author: data.author });
+            } else {
+                throw new Error('Missing data');
+            }
+        })
+        .catch(error => console.error('Error fetching quote:', error));
+}, []);
     return (
         <div>
-            <p>"{quote.text}"</p>
-            <cite>- {quote.author}</cite>
+            <p>"{quote.text || 'Default Quote Text'}"</p>
+            <cite>- {quote.author || 'Default Author'}</cite>
+
         </div>
     );
 }
