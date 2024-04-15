@@ -123,7 +123,7 @@ body {
   flex: 8;
   font-size: 14px;
   padding: 12px 15px;
-  border: 1px solid #cecece;
+  border: 1px solid #fcfafa;
   outline: none;
   font-weight: 400;
   max-width: 15%;
@@ -179,4 +179,109 @@ body {
 }
 .completed-task h2{
   text-align: center;
+}
+@media (max-width:1036px){
+  /* General body settings */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  background-image: url(https://img.freepik.com/premium-vector/woman-sitting-computer-working-minimalist-vector-illustration_760443-390.jpg);
+  background-repeat: no-repeat;
+  background-size: 28% ;
+  background-position-x: right;
+  background-position-y: bottom;
+}
+
+/* Header styles */
+header {
+  line-height: "0.8em";
+  background: #f1bc48;
+  color: #fff;
+  padding: 10px 10px;
+  text-align: center;
+  
+  width: 100%;
+
+}
+
+/* Main Todo body styles */
+.todo-body {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 500px;
+}
+
+/* Todo items styling */
+.todo-item {
+  background: #fff;
+  margin: 80px 10px;
+  padding: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Completed todo items styling */
+.checked-tag {
+  display: flex;
+  align-items: center;
+}
+
+/* Todo input form styling */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.select-input{
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+.aggTag {
+  padding: 10px;
+  border: 1px solid #9c4343;
+  border-radius: 5px;
+  width: 200%;
+}
+
+.new-tag,
+
+.delete-button,
+.complete-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.input-submit {
+  padding: 10px 20px;
+  border-radius: 5px;
+  flex: 2;
+  border: none;
+  background: #33312d;
+  color: #6f1212;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 600;
+  width: 50%;
+  outline: none;
+}
+/* Responsive adjustments */
+
+.input-text{
+  flex: 8;
+  font-size: 14px;
+  padding: 12px 15px;
+  border: 1px solid #cecece;
+  outline: none;
+  font-weight: 400;
+  max-width: 100%;
+}
 }
