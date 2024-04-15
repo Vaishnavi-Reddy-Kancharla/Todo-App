@@ -3,7 +3,7 @@ import TodosList from "./TodosList";
 import Header from "./Header";
 import InputTodo from "./InputTodo";
 import { v4 as uuidv4 } from "uuid";
-
+import RandomQuote from "./RandomQuote"; 
 function TodoContainer() {
   const todoList = [
     
@@ -75,6 +75,7 @@ function TodoContainer() {
     <div className="todo-body">
       
       <Header />
+      <RandomQuote /> 
       <InputTodo addTodoProps={addTodoItem} deleteAllTodo={delTodos} completeAll={completeAll}/>
       <TodosList
         todos={todos}
