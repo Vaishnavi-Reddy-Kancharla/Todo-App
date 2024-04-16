@@ -4,7 +4,7 @@ import sqlite3
 import random
 
 app = Flask(__name__)
-CORS(app,resources={r"/api/*": {"origins": "http://localhost:3000"}})  # Enable CORS
+CORS(app,resources={r"/api/*": {"origins": "https://vaishnavi-reddy-kancharla.github.io"}})  # Enable CORS
 
 def get_random_quote():
     connection = sqlite3.connect('quotes.db')
